@@ -271,8 +271,6 @@
             fetch('/api/layers')
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Camadas carregadas:', data);
-
                     if (!data.features || data.features.length === 0) {
                         showEmptyState();
                         return;
@@ -318,8 +316,6 @@
                 const geometry = feature.geometry;
                 const graphics = [];
 
-                console.log(`Criando camada: ${name}`, geometry);
-
                 if (geometry.type === 'GeometryCollection') {
                     geometry.geometries.forEach(geom => {
                         const graphic = createGraphic(geom, feature.properties, color);
@@ -337,8 +333,6 @@
                         graphics.push(graphic);
                     }
                 }
-
-                console.log(`Camada ${name} criada com ${graphics.length} geometrias`);
 
                 return new FeatureLayer({
                     title: name,
@@ -362,8 +356,6 @@
             function createGraphic(geojsonGeometry, properties, color) {
                 let esriGeometry;
                 let objectId = Math.floor(Math.random() * 1000000);
-
-                console.log('Processando geometria:', geojsonGeometry.type, geojsonGeometry.coordinates);
 
                 switch (geojsonGeometry.type) {
                     case 'Point':
