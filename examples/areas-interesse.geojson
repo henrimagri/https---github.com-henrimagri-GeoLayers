@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parque Ibirapuera",
+        "type": "park",
+        "area_km2": 1.58
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-46.6575, -23.5875],
+          [-46.6575, -23.5775],
+          [-46.6475, -23.5775],
+          [-46.6475, -23.5875],
+          [-46.6575, -23.5875]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Centro Histórico de São Paulo",
+        "type": "historic_district",
+        "unesco": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-46.6400, -23.5450],
+          [-46.6400, -23.5350],
+          [-46.6300, -23.5350],
+          [-46.6300, -23.5450],
+          [-46.6400, -23.5450]
+        ]]
+      }
+    }
+  ]
+}

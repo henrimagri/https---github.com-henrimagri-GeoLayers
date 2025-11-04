@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rodovia dos Bandeirantes",
+        "type": "highway",
+        "lanes": 6
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-46.6333, -23.5505],
+          [-47.0608, -23.0000],
+          [-47.4061, -22.8170]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "BR-101",
+        "type": "highway",
+        "lanes": 4
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-43.1729, -22.9068],
+          [-42.5, -22.0],
+          [-42.0, -21.5],
+          [-41.5, -21.0]
+        ]
+      }
+    }
+  ]
+}

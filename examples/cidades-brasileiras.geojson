@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "São Paulo",
+        "description": "Capital do estado de São Paulo",
+        "population": 12000000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6333, -23.5505]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rio de Janeiro",
+        "description": "Cidade maravilhosa",
+        "population": 6700000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-43.1729, -22.9068]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brasília",
+        "description": "Capital federal",
+        "population": 3000000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-47.9292, -15.7801]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salvador",
+        "description": "Capital da Bahia",
+        "population": 2900000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-38.5108, -12.9714]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fortaleza",
+        "description": "Capital do Ceará",
+        "population": 2700000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-38.5434, -3.7172]
+      }
+    }
+  ]
+}

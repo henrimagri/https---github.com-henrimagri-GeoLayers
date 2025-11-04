@@ -1,0 +1,48 @@
+# Docker Compose para GeoLayers Manager
+# Este arquivo configura todos os serviços necessários para rodar a aplicação
+
+services:
+  # PostgreSQL com PostGIS
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: geolayers-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: geolayers
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Aplicação Laravel (opcional - pode rodar via php artisan serve)
+  # Descomente se quiser rodar tudo via Docker
+  # app:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: geolayers-app
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8000:8000"
+  #   volumes:
+  #     - .:/var/www/html
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #   command: php artisan serve --host=0.0.0.0 --port=8000
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  default:
+    name: geolayers-network
